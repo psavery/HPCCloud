@@ -18,7 +18,7 @@ const typeMapping = {
 function addDefaults(config) {
   return Object.assign(
     {
-      type: 'sge',
+      type: 'slurm',
       maxWallTime: { hours: 0, minutes: 0, seconds: 0 },
       defaultQueue: '',
       sge: {
@@ -84,7 +84,7 @@ export default class SchedulerConfig extends React.Component {
   }
 
   render() {
-    const SubConfig = typeMapping[this.state.config.type || 'sge'];
+    const SubConfig = typeMapping[this.state.config.type || 'slurm'];
     return (
       <div>
         <section className={this.props.runtime ? style.hidden : style.group}>

@@ -24,10 +24,11 @@ export const clusterTemplate = {
       user: 'Your_Login',
     },
     scheduler: {
-      type: 'sge',
+      type: 'slurm',
     },
     parallelEnvironment: '',
-    numberOfSlots: 1,
+    numberOfNodes: 1,
+    numberOfCoresPerNode: 1,
     jobOutputDir: '/tmp',
     paraview: {
       installDir: '/opt/paraview',
